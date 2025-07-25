@@ -1,0 +1,50 @@
+html,
+body {
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background: linear-gradient(-59.84deg, #172235 0%, #111115 14%, #111115 65%, #172235 100%);
+  color: white;
+}
+
+/* Login */
+.login{
+  display: flex;
+  flex-direction: column;
+  position:absolute;
+  height: 35rem;
+  width: 25rem;
+  margin: auto 0px;
+  justify-self: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.blocks{
+  border-radius: 10px;
+  background-color: rgb(123, 123, 124, .05);
+  border: solid 1px rgba(255, 255, 255, 0.1);
+}
+
+.login input, button{
+  margin: 0;
+  height: 1.5rem;
+  margin-left: 2.5rem;
+  
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column; /* Stacks label on top of input */
+  margin-bottom: 1rem;    /* Optional spacing */
+}
+
+.form-group input {
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-bottom: 2px solid white; 
+  width: 75%;
+
+}

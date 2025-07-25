@@ -1,4 +1,5 @@
 import SideNavBarItem from "./SideNavBarItem";
+import { MdOutlineSpaceDashboard } from "react-icons/md";
 
 export default function SideNavBar() {
   return <>
@@ -11,9 +12,9 @@ export default function SideNavBar() {
                 User
             </div>
         </div>
-        <SideNavBarItem hasTopBorder={true}/>
-        <SideNavBarItem />
-        <SideNavBarItem />
+        <SideNavBarItem Icon={MdOutlineSpaceDashboard} iconStyle={dashboardIconStyles} text="Dashboard" hasTopBorder={true}/>
+        <SideNavBarItem Icon={MdOutlineSpaceDashboard} text="Dashboard" />
+        <SideNavBarItem Icon={MdOutlineSpaceDashboard} text="Dashboard" />
     </div>
   </>;
 }
@@ -53,3 +54,7 @@ const sideNavBarUserNameStyles = {
     justifyContent: "center",
     alignItems: "center",
 };
+
+const dashboardIconStyles = {
+    transform: "scale(-1, 1) rotate(90deg)",
+}

@@ -1,3 +1,5 @@
+import SideNavBarItem from "./SideNavBarItem";
+
 export default function SideNavBar() {
   return <>
     <div style={sideNavBarStyles}>
@@ -9,6 +11,9 @@ export default function SideNavBar() {
                 User
             </div>
         </div>
+        <SideNavBarItem hasTopBorder={true}/>
+        <SideNavBarItem />
+        <SideNavBarItem />
     </div>
   </>;
 }

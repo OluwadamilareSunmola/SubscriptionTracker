@@ -1,4 +1,6 @@
-export default function SideNavBarItem({ Icon, text, iconStyle, hasTopBorder }) {
+import { Link } from "react-router-dom";
+
+export default function SideNavBarItem({ link, Icon, text, iconStyle, hasTopBorder }) {
 
   // if the topBorder parameter is passed, we want to add the top border style
   // we do this to prevent the top and bottom border from thickening when multiple SideNavBar items are coupled together
@@ -8,12 +10,14 @@ export default function SideNavBarItem({ Icon, text, iconStyle, hasTopBorder }) 
   const combinedIconStyles = { ...iconStyles, ...iconStyle };
 
   return <>
-    <div style={sideNavBarItemStylesFormatted}>
-        {Icon && <Icon style={combinedIconStyles} />}
-        <div style={textStyles}>
-            {text}
+    <Link to={link} style={removeLinkStyling}>
+        <div style={sideNavBarItemStylesFormatted} className="nav-item">
+            {Icon && <Icon style={combinedIconStyles} />}
+            <div style={textStyles}>
+                {text}
+            </div>
         </div>
-    </div>
+    </Link>
   </>;
 }
 
@@ -25,6 +29,7 @@ const sideNavBarItemStyles = {
     "flex-direction": "row",
     borderBottom: "1px solid white",
     alignItems: "center",
+    cursor: "pointer",
 };
 
 const topBorderStyles = {
@@ -40,4 +45,9 @@ const iconStyles = {
 const textStyles = {
     margin: "0px 10px 0px 10px",
     fontSize: "15px",
+}
+
+const removeLinkStyling = {
+    color: "inherit",
+    textDecoration: "none",
 }

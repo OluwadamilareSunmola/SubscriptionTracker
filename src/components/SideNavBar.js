@@ -12,9 +12,9 @@ export default function SideNavBar() {
                 User
             </div>
         </div>
-        <SideNavBarItem Icon={MdOutlineSpaceDashboard} iconStyle={dashboardIconStyles} text="Dashboard" hasTopBorder={true}/>
-        <SideNavBarItem Icon={MdOutlineSpaceDashboard} text="Dashboard" />
-        <SideNavBarItem Icon={MdOutlineSpaceDashboard} text="Dashboard" />
+        <SideNavBarItem link="/dashboard" Icon={MdOutlineSpaceDashboard} iconStyle={dashboardIconStyles} text="Dashboard" hasTopBorder={true}/>
+        <SideNavBarItem link="/dashboard" Icon={MdOutlineSpaceDashboard} text="Dashboard" />
+        <SideNavBarItem link="/dashboard" Icon={MdOutlineSpaceDashboard} text="Dashboard" />
     </div>
   </>;
 }
